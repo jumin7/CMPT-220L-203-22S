@@ -1,5 +1,7 @@
 package base;
 
+import java.util.Scanner;
+
 public class Main {
     /**
      * # Lab Two
@@ -13,14 +15,22 @@ public class Main {
      *     - Else If
      */
     public static void main(String[] args) {
-        int x = 7;
-        int y = 9;
-        if (x < y) {
-            System.out.println ("x is smaller than y");
-        } else if ( y < x) {
-            System.out.println ("y is smaller than x");
+
+        Scanner scan = new Scanner(System.in);
+        int num1, num2;
+        System.out.println ("Enter a random integer");
+        num1 = scan.nextInt();
+        System.out.println ("Enter another random integer");
+        num2 = scan.nextInt();
+
+
+        
+        if (num1< num2) {
+            System.out.println ("The first number is smaller than second");
+        } else if ( num2 < num1) {
+            System.out.println ("The second number is smaller than first");
         } else {
-            System.out.println ("there was an error");
+            System.out.println ("they are equal");
         }
         // Make an if statement that triggers a print or println statement
         // Make an if, else statement where the else statement triggers a print or println statement
