@@ -16,8 +16,35 @@ public class Main {
      */
     public static void main(String[] args) {
         // Give me an example of you using switch case.
+        String animal = "tiger";
+        switch (animal){
+            case "sheep":
+                System.out.println ("A sheep is a herbivore. They have fluffy fur");
+                break;
+            case "tiger":
+                System.out.println ("A tiger is a carnivore. It is orange with black stripes");
+                break;
+            case "shark":
+                System.out.println ("A shark is a carnivore. It is an aquatic predator");
+                break;
+            default:
+                System.out.println ("Invalid input. Try a different name");
+        }
+
+
         // Give me an example of you using a for loop
+        String[] flowers = {"Daisy", "Lilly", "Lotus", "Sunflower"};
+        for (String i : flowers) {
+            System.out.println(i);
+          }
+
         // Give me an example of you using a while loop
+        int age = 0;
+        while (age < 18) {
+            System.out.println("You are not eligible to compete. You are too young.");
+            age = age + 6 ;
+        }   
+        
     }
     // For the following todos you'll probably want to define them below and then call them from the main function above.
 
@@ -26,6 +53,15 @@ public class Main {
      * For example if given the numbers 2 and 3. The math that the function should do is 2^3
      * and should print out or return 8. Print the output.
      */
+   
+    int power(int base, int power){
+        int result = 1;
+        while ( power != 0) {
+            result = result* base;
+            power = power -1 ;
+        } return result;
+    }
+
 
     /**
      * I want you to write a function that will take in a list and see how many times a given number is in the list.

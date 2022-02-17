@@ -66,7 +66,7 @@ public class Main {
         int height2 =152;
 
         if ((age2 < 18) || (height2 < 150)){
-            System.out.println ("You are not eligible to compete in the game.");    
+            System.out.println ("You are not eligible to compete in the game.");
         }else {
             System.out.println ("Something is wrong");
         }
