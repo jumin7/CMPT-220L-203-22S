@@ -69,14 +69,15 @@ public class Main {
      * or return 3. Print the output.
      */
     //int repetition( int search, int array)
-    int search = 2;
-    int count = 0;
-    int[] array = {1,2,3,3,3,4,5,6};
-      for (int i = 0; i < array.length; i++) {
-        if (i == search){
-            count = count+1;
-         }
-      } System.out.println (count);
+    int repetition(int search, int [] array){
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i == search){
+                count = count+1;
+             }
+          } return(count);
+
+    }
     
 
     /**
@@ -85,12 +86,20 @@ public class Main {
      * Once that’s done print or return the answer. Print the output
      */
 
-    int[] sumArray ={1,1,1};
-    int sum = 0;
-    for (int j= 0; i< sumArray.length; j++) {
-        sum = j +sum;
-    } System.out.println(sum);
+    int summation(int [] array){
+        int sum = 0;
+        for (int j= 0; j < array.length; j++) {
+            sum = array[j] + sum;
+        } return (sum);
+
+    }
     
+    
+    int[] exampleArray = new int[]{ 1,2,3,1,1 }; 
+    System.out.println( summation(exampleArray));
+
+    System.out.println( repetition(1,exampleArray));
+
 
     /**
      * Give me a function that gives the answer to the pythagorean theorem.
@@ -109,7 +118,7 @@ public class Main {
          int bSquared = power (b,2);
          int sum = addition(aSquared, bSquared);
          int c = power (sum,0.5);
-         System.out.println (c);
+         return (c);
      }
 
     int addition(int a, int b) {
