@@ -54,7 +54,7 @@ public class Main {
      * and should print out or return 8. Print the output.
      */
    
-    int power(int base, int power){
+    int power(int base, double power){
         int result = 1;
         while ( power != 0) {
             result = result* base;
@@ -68,12 +68,29 @@ public class Main {
      * For example if the array given is [2,3,5,2,3,6,7,8,2] and the number given is 2 the function should print out
      * or return 3. Print the output.
      */
+    //int repetition( int search, int array)
+    int search = 2;
+    int count = 0;
+    int[] array = {1,2,3,3,3,4,5,6};
+      for (int i = 0; i < array.length; i++) {
+        if (i == search){
+            count = count+1;
+         }
+      } System.out.println (count);
+    
 
     /**
      * Create a function named summation that will take in an int[ ] and return an int.
      * I want the function to then go through the given array and sum up digits in the array.
      * Once that’s done print or return the answer. Print the output
      */
+
+    int[] sumArray ={1,1,1};
+    int sum = 0;
+    for (int j= 0; i< sumArray.length; j++) {
+        sum = j +sum;
+    } System.out.println(sum);
+    
 
     /**
      * Give me a function that gives the answer to the pythagorean theorem.
@@ -86,6 +103,14 @@ public class Main {
      *
      * Once that’s done print or return the answer. Print the output
      */
+
+     int pythagorean(int a, int b){
+         int aSquared = power(a,2);
+         int bSquared = power (b,2);
+         int sum = addition(aSquared, bSquared);
+         int c = power (sum,0.5);
+         System.out.println (c);
+     }
 
     int addition(int a, int b) {
         int answer = a + b;
