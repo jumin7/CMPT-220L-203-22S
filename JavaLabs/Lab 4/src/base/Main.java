@@ -1,4 +1,5 @@
 package base;
+import java.lang.Math;
 
 public class Main {
     /**
@@ -30,6 +31,14 @@ public class Main {
             default:
                 System.out.println ("Invalid input. Try a different name");
         }
+        // Line of commands that tests each of the function
+        int[] exampleArray = { 1,2,3,1,1 };
+
+        System.out.println( summation(exampleArray));
+        System.out.println( repetition(1,exampleArray));
+        System.out.println ( power(3,2));
+        System.out.println(pythagorean(3,4));
+
 
 
         // Give me an example of you using a for loop
@@ -54,12 +63,9 @@ public class Main {
      * and should print out or return 8. Print the output.
      */
    
-    int power(int base, double power){
-        int result = 1;
-        while ( power != 0) {
-            result = result* base;
-            power = power -1 ;
-        } return result;
+    static double power(int base, int power){
+        double result = Math.pow(base,power);
+        return result;
     }
 
 
@@ -69,10 +75,10 @@ public class Main {
      * or return 3. Print the output.
      */
     //int repetition( int search, int array)
-    int repetition(int search, int [] array){
+    static int repetition(int search, int [] array){
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-            if (i == search){
+            if (array[i] == search){
                 count = count+1;
              }
           } return(count);
@@ -86,7 +92,7 @@ public class Main {
      * Once that’s done print or return the answer. Print the output
      */
 
-    int summation(int [] array){
+    static int summation(int [] array){
         int sum = 0;
         for (int j= 0; j < array.length; j++) {
             sum = array[j] + sum;
@@ -95,10 +101,7 @@ public class Main {
     }
     
     
-    int[] exampleArray = new int[]{ 1,2,3,1,1 }; 
-    System.out.println( summation(exampleArray));
-
-    System.out.println( repetition(1,exampleArray));
+    
 
 
     /**
@@ -112,17 +115,17 @@ public class Main {
      *
      * Once that’s done print or return the answer. Print the output
      */
+    
+    static double pythagorean(int a, int b) {
+        double aSquared = power(a,2);
+        double bSquared = power(b,2);
+        double sum = addition(aSquared, bSquared);
+        double c = Math.sqrt(sum);
+        return c;     
+    }
 
-     int pythagorean(int a, int b){
-         int aSquared = power(a,2);
-         int bSquared = power (b,2);
-         int sum = addition(aSquared, bSquared);
-         int c = power (sum,0.5);
-         return (c);
-     }
-
-    int addition(int a, int b) {
-        int answer = a + b;
+    static double addition(double a, double b) {
+        double answer = a + b;
         return answer;
     }
 
