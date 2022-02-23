@@ -25,24 +25,47 @@ public class Main {
     static int pretzels_available = 60;
     static double cash = 1500.0;
     static double tips = 0.0;
+    
 
 
     public static void main(String[] args) {
         //	Replace this with your dry inventory function!
-        wet_inventory();
+
     }
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
-    }
 
-    static void wet_inventory() {
+
+        static int inventoryUpdate(int pretzelSold, int lemonadeSold){
+            int pretzels = pretzels_available - pretzelSold;
+            int lemonade = lemonades_available - lemonadeSold;
+            System.out.println(pretzels);
+            System.out.println(lemonade);
+        }
+
+        static double cashUpdate (int cashEarned, int tipsEarned){
+            double cash = cash + cashEarned;
+            double tips = tips + tipsEarned;
+            System.out.println (cash);
+            System.out.println (tips);
+        } 
+    }    
+
+    inventoryUpdate(4,1);
+    
+}
+
+
+
+
+    //static void wet_inventory() {
         /**
          * We have 10 customers in the first hour! This is what they bought! When running this with your dry code you
          * don't want to run this function because then the numbers in the end will be wrong!
          */
         //Customer 1
-        pretzels_available -= 4;
+        /**pretzels_available -= 4;
         cash += 8;
         lemonades_available -= 1;
         cash += 8;
@@ -124,6 +147,6 @@ public class Main {
         System.out.println("Lemonades Inventory: " + lemonades_available);
         System.out.println("Pretzels Inventory: " + pretzels_available);
         System.out.println("Cash: " + cash);
-        System.out.println("Tips: " + tips);
-    }
-}
+        System.out.println("Tips: " + tips); */
+    
+
