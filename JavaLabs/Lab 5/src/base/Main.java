@@ -30,30 +30,50 @@ public class Main {
 
     public static void main(String[] args) {
         //	Replace this with your dry inventory function!
+        dry_inventory();
+        System.out.println("Results for the hour!");
+        System.out.println("Lemonades Inventory: " + lemonades_available);
+        System.out.println("Pretzels Inventory: " + pretzels_available);
+        System.out.println("Cash: " + cash);
+        System.out.println("Tips: " + tips); 
+
 
     }
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
-
-
-        static int inventoryUpdate(int pretzelSold, int lemonadeSold){
-            int pretzels = pretzels_available - pretzelSold;
-            int lemonade = lemonades_available - lemonadeSold;
-            System.out.println(pretzels);
-            System.out.println(lemonade);
-        }
-
-        static double cashUpdate (int cashEarned, int tipsEarned){
-            double cash = cash + cashEarned;
-            double tips = tips + tipsEarned;
-            System.out.println (cash);
-            System.out.println (tips);
-        } 
+        inventoryUpdate(4,1,4);
+        inventoryUpdate(2,3,0);
+        inventoryUpdate(3,0,0);
+        inventoryUpdate(1,2,0);
+        inventoryUpdate(0,6,10);
+        inventoryUpdate(4,0,5);
+        inventoryUpdate(2,0,0);
+        inventoryUpdate(10,8,10);
+        inventoryUpdate(6,0,0);
+        inventoryUpdate(0,1,0);
+        inventoryUpdate(1,0,0);
+        inventoryUpdate(0,7,4);
+        inventoryUpdate(2,0,0);
+        inventoryUpdate(6,3,0);
+        inventoryUpdate(9,2,3);
+        
     }    
+    static void inventoryUpdate(int pretzelSold, int lemonadeSold, int tips){
+        pretzels_available -= pretzelSold;
+        lemonades_available -= lemonadeSold;
+        cashUpdate(pretzelSold*2 + lemonadeSold*8,tips);
 
-    inventoryUpdate(4,1);
-    
+
+    }
+
+    static void cashUpdate (int cashEarned, int tipsEarned){
+        cash += cashEarned;
+        tips += tipsEarned;
+        
+    } 
+
+
 }
 
 
