@@ -1,6 +1,6 @@
 public class main {
-    public main() {
-    }
+   // public main() {
+    //}
 
     public static void main(String[] args) {
 
@@ -9,7 +9,8 @@ public class main {
         ListItem c = new ListItem(2, b);
         ListItem d = new ListItem(3, c);
         ListItem e = new ListItem(4, d);
-        
+        System.out.println(e.value);
+
 
     }
 }

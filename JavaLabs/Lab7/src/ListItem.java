@@ -1,11 +1,11 @@
 public class ListItem {
     int value;
-    ListItem listItem;
+    ListItem prevInstance;
 
 
     ListItem(int newValue, ListItem newListItem) {
         value = newValue;
-        listItem = newListItem;
+        prevInstance = newListItem;
 
     }
 
