@@ -6,7 +6,7 @@ public class ListItem {
     ListItem(int newValue, ListItem newListItem) {
         value = newValue;
         prevInstance = newListItem;
-
     }
+
 
 }
